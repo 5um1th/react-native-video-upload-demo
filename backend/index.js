@@ -41,8 +41,9 @@ app.post("/", upload.single("video"), async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.send("Video Upload Backend Working");
+app.get("/", async (req, res) => {
+  const col = await loadCollection(COLUMN_NAME, db);
+  res.send(col.data.map(entry => ({ id: entry["$loki"], path: entry.path })));
 });
 
 app.listen(PORT, () => {
