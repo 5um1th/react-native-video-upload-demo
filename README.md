@@ -1,5 +1,7 @@
 # React Native Video Upload Demo
 
+https://medium.com/react-native-training/uploading-videos-from-react-native-c79f520b9ae1
+
 This is a project demoing how to upload videos to a node express web server.
 
 ## Status
